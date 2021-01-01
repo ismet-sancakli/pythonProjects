@@ -1,3 +1,5 @@
+import random
+
 rock = '''
     _______
 ---'   ____)
@@ -24,22 +26,27 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-import random
+game_images = [rock, paper, scissors]
 
-RPS = [rock , paper , scissors]
-
-your_choice = int(input("What do you choose? Type 0 is Rock, Type 1 is Paper, Type 2 is Scissors. "))
-print("Your choice is: " + RPS[your_choice])
-
-computer_choice =random.randint(0,2) 
-print("Computer choice is: " + RPS[computer_choice])
-
-if ((your_choice == 0 and computer_choice == 1) or (computer_choice == 0 and your_choice == 2) or (your_choice == 1 and computer_choice == 2)):
-  print("You lost !")
-elif((your_choice == 0 and computer_choice == 2) or (computer_choice == 2 and your_choice == 3) or (your_choice == 1 and computer_choice == 0)):
-  print("\n*** You win !!! ***\n")
-elif (your_choice == computer_choice):
-  print("It is a draw")
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+if user_choice >= 3 or user_choice < 0: 
+    print("You typed an invalid number, you lose!") 
 else:
-  print("Try Again !!! Invalid Number")  
+    print(game_images[user_choice])
+
+    computer_choice = random.randint(0, 2)
+    print("Computer chose:")
+    print(game_images[computer_choice])
+
+
+    if user_choice == 0 and computer_choice == 2:
+        print("You win!")
+    elif computer_choice == 0 and user_choice == 2:
+        print("You lose")
+    elif computer_choice > user_choice:
+        print("You lose")
+    elif user_choice > computer_choice:
+        print("You win!")
+    elif computer_choice == user_choice:
+        print("It's a draw")
 

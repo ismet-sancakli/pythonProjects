@@ -1,1 +1,1 @@
-I will write my project for the beginner level python learners.
+I will write my projects for beginner python learners.

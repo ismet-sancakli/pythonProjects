@@ -53,7 +53,6 @@ def play_game():
 
   print(logo)
 
-  #Hint 5: Deal the user and computer 2 cards each using deal_card()
   user_cards = []
   computer_cards = []
   is_game_over = False

@@ -12,7 +12,5 @@ total_bill = bill + total_tip_amount
 bill_per_person = total_bill / people
 final_amount = round(bill_per_person, 2)
 
-#FAQ: How to round to 2 decimal places?
-#https://www.udemy.com/course/100-days-of-code/learn/lecture/17965132#questions/13315048
 
 print(f"Each person should pay: ${final_amount}")

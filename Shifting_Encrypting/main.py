@@ -36,7 +36,8 @@ def decode(int_val, string):
 message = "merhaba dünya"
 number = int(input("Enter the number between 0 to 29 : "))
 enc_message = letter_dictionary(number)
-decode(number, enc_message)
 print("-----------------------------------------------------")
-decode(2, "ogşiyzy fyöay")
+decode(number, enc_message)
+
+
 
